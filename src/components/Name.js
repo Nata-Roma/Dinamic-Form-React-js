@@ -22,6 +22,7 @@ const Name = ({ id, type, required = false, label, setOutput }) => {
                     }
                 }
                 className='input'
+                data-testid="inputName"
             />
         </div>
     )

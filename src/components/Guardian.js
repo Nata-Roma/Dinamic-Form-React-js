@@ -26,6 +26,7 @@ const Guardian = (props) => {
                     name={id}
                     checked={isGuardian}
                     onChange={handleChecked}
+                    data-testid='checkbox'
                 />
                 {isGuardian && options.map((option) => {
                     const { id, type, required = false } = option;
@@ -45,6 +46,7 @@ const Guardian = (props) => {
                             }}
                             required={isGuardian}
                             className='input guardian'
+                            data-testid="guardian"
                         />
                     </div>
                 )}
