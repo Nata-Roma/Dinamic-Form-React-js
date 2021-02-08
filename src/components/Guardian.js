@@ -37,6 +37,7 @@ const Guardian = (props) => {
                             name={id}
                             value={id === 'guardianName' ? guardianName : guardianContact}
                             placeholder={id}
+                            title={`Please enter guardian's ${id === 'guardianName' ? 'name' : 'contact'}`}
                             required={required}
                             onChange={(e) => {
                                 id === 'guardianName' 

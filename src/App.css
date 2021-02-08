@@ -64,6 +64,15 @@
   outline: none;
   width: 40%;
 }
+
+/* .input:required:invalid {
+  border-bottom: 1px solid red;
+} */
+
+.input:focus:required:invalid {
+  border-bottom: 1px solid red;
+}
+
 .inner-container {
   display: flex;
   justify-content: space-between;

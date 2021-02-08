@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const DOB = ({ id, type, required = false, setOutput }) => {
     const [dateOfBirth, setDateOfBirth] = useState('');
+    const dateRef = useRef();
+
     let maxDate = new Date();
     const minAge = 18;
     maxDate.setFullYear(maxDate.getFullYear()-minAge);
+
+    const handleDateChange = (e) => {
+        const date = dateRef.current;
+        if(!date.validity.valid) {
+            date.setCustomValidity('Please choose your date of birth');
+        } else if(date.validity.valid) {
+            date.setCustomValidity('');
+        }
+        setDateOfBirth(e.target.value)
+    }
 
     return (
         <div className='inner-container'>
@@ -18,10 +30,11 @@ const DOB = ({ id, type, required = false, setOutput }) => {
                 value={dateOfBirth}
                 max={maxDate.toJSON().slice(0, 10)}
                 required={required}
-                onChange={(e) => {setDateOfBirth(e.target.value);
+                onChange={(e) => { handleDateChange(e);
                 setOutput(e.target);
                 }}
                 className='input'
+                ref={dateRef}
             />
         </div>
     )
