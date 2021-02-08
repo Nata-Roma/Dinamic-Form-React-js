@@ -17,6 +17,7 @@ const Contacts = (props) => {
                         
                             <input
                                 type={type}
+                                aria-label={id}
                                 pattern='\d+'
                                 required={required}
                                 name={id}

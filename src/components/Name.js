@@ -10,6 +10,7 @@ const Name = ({ id, type, required = false, label, setOutput }) => {
                 </label>
             <input
                 type={type}
+                aria-label={id}
                 name={id}
                 id={id}
                 pattern='\S+ \S+.*'

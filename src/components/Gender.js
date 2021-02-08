@@ -9,7 +9,8 @@ const Gender = ({ id, required = false, setOutput }) => {
                     Gender:
                 </label>
                 <select 
-                    id={id} 
+                    id={id}
+                    aria-label={id} 
                     name={id} 
                     value={gender}
                     required={required}

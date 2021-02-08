@@ -13,6 +13,7 @@ const DOB = ({ id, type, required = false, setOutput }) => {
                 </label>
             <input
                 type={type}
+                aria-label={id}
                 name={id}
                 id={id}
                 value={dateOfBirth}

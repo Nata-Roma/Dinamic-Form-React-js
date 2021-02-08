@@ -22,6 +22,7 @@ const Guardian = (props) => {
                 </label>
                 <input
                     type='checkbox'
+                    aria-label={id}
                     id={id}
                     name={id}
                     checked={isGuardian}

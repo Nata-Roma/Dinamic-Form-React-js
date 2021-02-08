@@ -15,7 +15,7 @@ const FormComponent = ({ input }) => {
             ...output
         };
         setOutput({});
-        // alert(`Form output: ${JSON.stringify(result)}`);
+         alert(`Form output: ${JSON.stringify(result)}`);
         
     }
 
@@ -77,7 +77,7 @@ const FormComponent = ({ input }) => {
                 )
             }
             )}
-            <button className='submit'>Submit</button>
+            <button className='submit' aria-label='button'>Submit</button>
         </form>
         </div>
     )
