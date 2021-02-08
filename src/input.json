@@ -1,0 +1,13 @@
+[
+    {"id": "name", "type": "text", "label": "Name", "required": true},
+    {"id": "dob", "type": "date", "label": "Date", "required": true},
+    {"id": "gender", "type": "", "label": "Gender", "required": false},
+    {"id": "contacts", "options": [
+        {"id": "mobile", "type": "text", "label": "Mobile", "required": false},
+        {"id": "home", "type": "text", "label": "Home", "required": false}
+    ]},
+    {"id": "guardian", "options": [
+        {"id": "guardianName", "type": "text", "label": "Guardian", "required": true},
+        {"id": "guardianContact", "type": "text", "label": "Guardian", "required": true}
+    ]}
+]
